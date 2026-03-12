@@ -1,0 +1,67 @@
+---
+import {Icon} from "astro-icon/components"
+import astro from "../assets/astro.svg";
+---
+
+<footer>
+    <img src={astro.src} >
+    <p>En Carlodent nos dedicamos a transformar vidas a través de sonrisas sanas y hermosas, brindando atención odontológica de primer nivel</p>
+
+    <div id="icons-container">
+        <Icon name="mdi:facebook" />
+        <Icon name="mdi:linkedin" />
+        <Icon name="mdi:instagram" />
+    </div>
+
+    <div id="copyright-container">
+        <p>Copyright © 2025 Dental Website.<br> All Rights Reserved.</p>
+        <p>Designed by Carlos</p>
+    </div>
+</footer>
+
+<style>
+
+    [data-icon]{
+		vertical-align: middle;
+		padding: 0.5em;
+		border-radius:50%;
+		border: none;
+		background-color: var(--green);
+		font-size: 1.5em;
+	}
+    footer {
+        background-color: var(--purple);
+        height: 30em;
+        color: var(--white);
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        padding: 0 16px;
+                    text-align:center;
+        p{
+            margin:0.5em;
+        }
+        img{
+            width: 120px;
+            height: 64px;
+        }
+
+        #icons-container{
+            display:flex;
+		flex-direction:row;
+		gap: 1em;
+        justify-content:center;
+        }
+
+        #copyright-container{
+            border-top: 2px solid var(--white);
+            padding-top: 32px;
+            margin-top: 16px;
+            text-align:center;
+            width:100%;
+        }
+
+    }
+    </style>

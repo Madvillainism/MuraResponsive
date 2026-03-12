@@ -1,0 +1,51 @@
+---
+import mura from "../assets/mura.webp";
+import Navbar from "./Navbar.astro";
+import "../styles/styles.css";
+---
+
+<main>
+  <Navbar />
+  <div id="hero-container">
+    <img />
+
+    <span>Ingeniero en felicidad</span>
+    <h1>Ing. Murasaki Tenma</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+      architecto repellat dignissimos! Neque debitis quidem distinctio dolorum
+      obcaecati dignissimos mollitia.
+    </p>
+
+    <button>Download CV</button>
+  </div>
+</main>
+
+<style>
+  main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #hero {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  @media screen and (max-width: 768px) {
+    #container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #hero {
+      display: block;
+      padding-top: 10%;
+    }
+  }
+</style>

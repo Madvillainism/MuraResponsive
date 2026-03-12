@@ -1,0 +1,45 @@
+---
+import { Icon } from "astro-icon/components";
+import astro from "../assets/astro.svg";
+import "../styles/styles.css";
+---
+
+<nav>
+  <img src={astro.src} alt="Astro logo" />
+
+  <Icon name="material-symbols:density-medium-rounded" />
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  }
+
+  [data-icon] {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    color: var(--black);
+  }
+
+  img {
+    width: 120px;
+    height: 64px;
+  }
+
+  @media screen and (max-width: 768px) {
+  }
+</style>
+
+<script>
+  const icon = document.querySelector("[data-icon]");
+
+  icon!.addEventListener("click", () => {
+    alert("You clicked the icon!");
+  });
+</script>
