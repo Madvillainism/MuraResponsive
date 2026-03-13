@@ -4,8 +4,8 @@ import Navbar from "./Navbar.astro";
 import "../styles/styles.css";
 ---
 
+<Navbar />
 <main>
-  <Navbar />
   <div id="hero-container">
     <span>Ingeniero en felicidad</span>
     <h1>Ing. Murasaki Tenma</h1>
@@ -36,11 +36,6 @@ import "../styles/styles.css";
   }
 
   @media screen and (max-width: 768px) {
-    #container {
-      display: flex;
-      flex-direction: column;
-    }
-
     #hero {
       display: block;
       padding-top: 10%;
