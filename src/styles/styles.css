@@ -3,6 +3,8 @@
   --green: #74aa50;
   --white: #e9eae4;
   --black: #25282a;
+
+  --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -15,8 +17,8 @@ html {
 }
 
 body {
+  width: auto;
   margin: 0 auto;
-  width: 100%;
 }
 
 h1 {

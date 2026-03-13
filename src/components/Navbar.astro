@@ -10,6 +10,14 @@ import "../styles/styles.css";
   <Icon name="material-symbols:density-medium-rounded" />
 </nav>
 
+<div id="mobile-menu">
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</div>
+
 <style>
   nav {
     display: flex;
@@ -17,19 +25,61 @@ import "../styles/styles.css";
     background-color: var(--white);
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
+    padding: 1em;
+    width: auto;
   }
 
   [data-icon] {
-    width: 32px;
-    height: 32px;
     cursor: pointer;
     color: var(--black);
+    background-color: var(--green);
+    border-radius: 50%;
+    padding: 0.5em;
+    font-size: 1.5em;
   }
 
   img {
     width: 120px;
     height: 64px;
+  }
+
+  #mobile-menu {
+    background-color: var(--white);
+    padding: 0 1em; /* Horizontal padding only */
+
+    /* Animation Core */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition:
+      max-height 0.5s ease-in-out,
+      opacity 0.4s ease-in-out,
+      transform 0.5s ease-out;
+
+    display: flex; /* Keep it flex, but collapsed */
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mobile-menu.is-open {
+    max-height: 300px; /* Give it enough height to fit the list */
+    opacity: 1;
+    transform: translateY(0);
+    padding: 1em; /* Restore vertical padding */
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+    li {
+      color: var(--black);
+      transition: var(--transition);
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -38,8 +88,8 @@ import "../styles/styles.css";
 
 <script>
   const icon = document.querySelector("[data-icon]");
-
+  const menu = document.getElementById("mobile-menu");
   icon!.addEventListener("click", () => {
-    alert("You clicked the icon!");
+    menu?.classList.toggle("is-open");
   });
 </script>

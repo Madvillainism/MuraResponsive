@@ -20,8 +20,8 @@ import Footer from "./Footer.astro";
     </p>
 
     <div id="buttons">
-      <button>Ver Productos</button>
-      <button>Realizar Pedido</button>
+      <a href="/about-us">Ver Productos</a>
+      <a>Realizar Pedido</a>
     </div>
     <img src={mura.src} alt="purple man" class="hero-img" />
   </div>
@@ -34,7 +34,7 @@ import Footer from "./Footer.astro";
         architecto repellat dignissimos! Neque debitis quidem distinctio dolorum
         obcaecati dignissimos mollitia.
       </p>
-      <button> View projects </button>
+      <a> View projects </a>
       <article id="card-container">
         <div class="card">
           <h2>Diseños de sonrisa</h2>
@@ -77,7 +77,7 @@ import Footer from "./Footer.astro";
       architecto repellat dignissimos! Neque debitis quidem distinctio dolorum
       obcaecati dignissimos mollitia.
     </p>
-    <button>Conocer Más</button>
+    <a>Conocer Más</a>
   </section>
 
   <section id="contact-container">
@@ -91,60 +91,60 @@ import Footer from "./Footer.astro";
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div> -->
-      <section id="contact-info">
-        <Icon class="other-icon" name="material-symbols:location-on" />
-        <div>
-          <h3>Teléfono</h3>
-          <p>0424-696-7524</p>
-        </div>
-      </section>
-      <section id="contact-info">
-        <Icon name="material-symbols:location-on" />
-        <div>
-          <h3>Teléfono</h3>
-          <p>0424-696-7524</p>
-        </div>
-      </section>
- 
+    <section id="contact-info">
+      <Icon class="other-icon" name="material-symbols:location-on" />
+      <div>
+        <h3>Teléfono</h3>
+        <p>0424-696-7524</p>
+      </div>
+    </section>
+    <section id="contact-info">
+      <Icon name="material-symbols:location-on" />
+      <div>
+        <h3>Teléfono</h3>
+        <p>0424-696-7524</p>
+      </div>
+    </section>
   </section>
 
   <section id="form-container">
-	<h1>¡Llamame el jueves!</h1>
+    <h1>¡Llamame el jueves!</h1>
 
-	<p>¡Estamos disponibles para responder cualquier duda que tengas! Respondemos dentro de las 24 horas.
-	</p>
+    <p>
+      ¡Estamos disponibles para responder cualquier duda que tengas! Respondemos
+      dentro de las 24 horas.
+    </p>
 
-	<div id="icons-container">
-		<Icon name="mdi:facebook" />
-		<Icon name="mdi:linkedin" />
-		<Icon name="mdi:instagram" />
-	</div>
+    <div id="icons-container">
+      <Icon name="mdi:facebook" />
+      <Icon name="mdi:linkedin" />
+      <Icon name="mdi:instagram" />
+    </div>
 
-	<article id="schedule-container">
-		<section>
-			<h2>Horario</h2>
-			<p>xd</p>
-			</section>
-<section>
-			<h2>Dirección</h2>
-			<p>xd</p>
-			</section>
-		</article>
-			<form>
-				<input type="text" placeholder="Nombre">
-				<input type="text" placeholder="Correo">
-				<input type="text" placeholder="Mensaje">
-				<button>Enviar</button>
-			</form>
-	</section>
+    <article id="schedule-container">
+      <section>
+        <h2>Horario</h2>
+        <p>xd</p>
+      </section>
+      <section>
+        <h2>Dirección</h2>
+        <p>xd</p>
+      </section>
+    </article>
+    <form>
+      <input type="text" placeholder="Nombre" />
+      <input type="text" placeholder="Correo" />
+      <input type="text" placeholder="Mensaje" />
+      <button>Enviar</button>
+    </form>
+  </section>
 </main>
 
-<Footer/>
+<Footer />
 
 <style>
   main {
-    height: 100%;
-    width: 100%;
+    width: auto;
   }
 
   .hero-img {
@@ -177,9 +177,11 @@ import Footer from "./Footer.astro";
     gap: 16px;
   }
 
-  button {
+  a {
     padding: 0.5em;
     border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
     color: var(--black);
     background-color: var(--green);
     border: 2px solid var(--green);
@@ -213,20 +215,20 @@ import Footer from "./Footer.astro";
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 16px;
-      margin-top: 32px;
+      gap: 2em;
+      margin-top: 20%;
     }
 
     .card {
+      align-items: flex-start;
       border-radius: 12px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      align-items: flex-start;
       gap: 16px;
-      height: 20rem;
-      width: 90%;
+      height: 10em;
+      justify-content: flex-end;
       padding: 1em;
+      width: 90%;
 
       h2 {
         color: var(--white);
@@ -259,6 +261,7 @@ import Footer from "./Footer.astro";
       align-items: center;
       gap: 16px;
       padding-top: 64px;
+      width: 90%;
 
       div {
         background-color: var(--green);
@@ -269,8 +272,9 @@ import Footer from "./Footer.astro";
         justify-content: center;
         align-items: center;
         padding: 0.5em;
-        width: 10em;
         height: 8em;
+        width: 90%;
+
         h2 {
           font-size: 1.75rem;
           margin: 0;
@@ -291,11 +295,12 @@ import Footer from "./Footer.astro";
       justify-content: center;
       align-items: center;
       gap: 16px;
+      width: 90%;
     }
 
     .experience-img {
       width: 320px;
-      height: 320px;
+      height: 80%;
     }
   }
 
@@ -305,7 +310,7 @@ import Footer from "./Footer.astro";
     justify-content: center;
     align-items: flex-start;
     gap: 16px;
-    padding: 64px 16px;
+    padding-bottom: 2em;
   }
 
   #contact-container {
@@ -313,98 +318,98 @@ import Footer from "./Footer.astro";
     display: flex;
     flex-direction: row;
     background-size: cover;
-	background-repeat: no-repeat;
-	justify-content: center;
-	align-items: flex-end;
-	background-position: center;
-	gap: 16px;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: flex-end;
+    background-position: center;
+    gap: 16px;
     height: 500px;
   }
 
   #contact-info {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	gap: 16px;
-	border: 1px solid var(--black);
-	border-radius: 12px;
-	padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid var(--black);
+    border-radius: 12px;
+    padding: 0.5em;
 
-	[data-icon]{
-		vertical-align: middle;
-		padding: 0.5em;
-		border-radius:50%;
-		border: none;
-		background-color: var(--green);
-	}
+    [data-icon] {
+      vertical-align: middle;
+      padding: 0.5em;
+      border-radius: 50%;
+      border: none;
+      background-color: var(--green);
+    }
 
-	h3 {
-	  margin: 0;	  
-	}
+    h3 {
+      margin: 0;
+    }
 
-	p {
-	  margin: 0;
-	  font-size: 0.8rem;
-	}
+    p {
+      margin: 0;
+      font-size: 0.8rem;
+    }
   }
 
   #form-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	height: 550px;
-	gap: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    gap: 16px;
+    padding-top: 2em;
+    h1,
+    p {
+      text-align: left;
+      margin: 0;
+    }
 
-	h1, p{
-		text-align:left;
-		margin: 0;
-	}
+    #icons-container {
+      display: flex;
+      flex-direction: row;
+      gap: 1em;
 
-	#icons-container{
-		display:flex;
-		flex-direction:row;
-		gap: 1em;
+      [data-icon] {
+        vertical-align: middle;
+        padding: 0.5em;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--green);
+        font-size: 1.5em;
+      }
+    }
 
-		[data-icon]{
-		vertical-align: middle;
-		padding: 0.5em;
-		border-radius:50%;
-		border: none;
-		background-color: var(--green);
-		font-size: 1.5em;
-	}
-	}
+    #schedule-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 1em;
+    }
 
-	#schedule-container{
-		display:flex;
-		flex-direction:row;
-		width:100%;
-		gap: 1em;
-	}
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1em;
+      width: 100%;
+    }
 
-	form{
-		display:flex;
-		flex-direction:column;
-		justify-content: center;
-		align-items: flex-start;
-		gap: 1em;
-		width: 100%;
-	}
-
-	input {
-		border-radius: 12px;
-		border: none;
-		padding: 0.5em;
-		height: 2em;
-		width: 90%;
-
-	}
-	input:nth-child(3) {
-		height: 6em;
-		resize: none;
-		}
+    input {
+      border-radius: 12px;
+      border: none;
+      padding: 0.5em;
+      height: 2em;
+      width: 90%;
+    }
+    input:nth-child(3) {
+      height: 6em;
+      resize: none;
+    }
   }
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
